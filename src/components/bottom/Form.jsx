@@ -40,41 +40,14 @@ const Form = () => {
 
   return (
     <div>
-      <form className="main-form">
-        <h1>NEW RECIPE</h1>
-        <input
-          type="text"
-          name="img"
-          placeholder="image"
-          value={newRecipe.img}
-          onChange={setRecipe}
-        />
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          onChange={setRecipe}
-        />
-        <input
-          type="text"
-          name="subtitle"
-          placeholder="Subtitle"
-          onChange={setRecipe}
-        />
-        <input
-          type="text"
-          name="author"
-          placeholder="Author"
-          onChange={setRecipe}
-        />
-        <textarea
-          type="text"
-          name="preparation"
-          placeholder="Preparation"
-          cols="30"
-          rows="10"
-          onChange={setRecipe}
-        />
+      <form className='main-form' >
+
+      <h1>NEW RECIPE</h1>
+        <input type="text" name="img" placeholder="image" value={newRecipe.img} onChange={setRecipe}/>
+        <input type="text" name="title" placeholder="Title" value={newRecipe.title} onChange={setRecipe}/>
+        <input type="text" name="subtitle" placeholder="Subtitle" value={newRecipe.subtitle} onChange={setRecipe}/>
+        <input type="text" name="author" placeholder="Author" value={newRecipe.author} onChange={setRecipe}/>
+        <textarea type="text" name="preparation" placeholder="Preparation" cols="30" rows="10" value={newRecipe.preparation} onChange={setRecipe}/>
         <h2>Tags</h2>
         <select name="types" onChange={typeHandler}>
           <option value="Beef">Beef</option>
