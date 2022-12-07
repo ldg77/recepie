@@ -11,8 +11,7 @@ const Form = () => {
     author: "",
     preparation: "",
     ingredients: [],
-    quantity: "",
-    tags: "",
+    tags: "Beef",
   };
   const [newRecipe, setNewRecipe] = useState(INITIAL);
 
@@ -44,11 +43,11 @@ const Form = () => {
       <form className='main-form' >
 
       <h1>NEW RECIPE</h1>
-        <input type="text" name="img" placeholder="image" value={newRecipe.img} onChange={setRecipe}/>
-        <input type="text" name="title" placeholder="Title" value={newRecipe.title} onChange={setRecipe}/>
+        <input type="text" name="img" placeholder="image" value={newRecipe.img}  onChange={setRecipe}/>
+        <input type="text" name="title" placeholder="Title" value={newRecipe.title} required onChange={setRecipe}/>
         <input type="text" name="subtitle" placeholder="Subtitle" value={newRecipe.subtitle} onChange={setRecipe}/>
-        <input type="text" name="author" placeholder="Author" value={newRecipe.author} onChange={setRecipe}/>
-        <textarea type="text" name="preparation" placeholder="Preparation" cols="30" rows="10" value={newRecipe.preparation} onChange={setRecipe}/>
+        <input type="text" name="author" placeholder="Author" value={newRecipe.author} required onChange={setRecipe}/>
+        <textarea type="text" name="preparation" placeholder="Preparation" cols="30" rows="10" value={newRecipe.preparation} required onChange={setRecipe}/>
         <h2>Tags</h2>
         <select name="types" onChange={typeHandler}>
           <option value="Beef">Beef</option>
@@ -83,8 +82,8 @@ const Form = () => {
           e.target[1].value = "";
         }}
       >
-        <input type="text" name="ingredients" placeholder="Ingredients" />
-        <input type="number" name="quantitiy" placeholder="Quantity" />
+        <input type="text" name="ingredients" placeholder="Ingredients"  />
+        <input type="number" name="quantitiy" placeholder="Quantity"  />
         <select name="types">
           <option value="l">Liter</option>
           <option value="g">Gramm</option>
