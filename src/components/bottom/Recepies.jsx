@@ -1,7 +1,6 @@
 import React from "react";
 import useFetch from "../../custom/useFetch.jsx";
 import connection from "../../connection.json";
-
 import { useNavigate } from "react-router-dom";
 const Recepies = () => {
   const [recepies, setRecepies] = useFetch(connection.URL);
