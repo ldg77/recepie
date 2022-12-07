@@ -14,8 +14,8 @@ const CommentForm = ({ id, setShowCommentForm }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`${connection.URI}/${id}/comment`, {
-      method: "POST",
+    fetch(`http://localhost:4000/${id}/comment`, {
+      method: "PATCH",
       body: JSON.stringify(formData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",

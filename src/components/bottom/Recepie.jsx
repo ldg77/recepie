@@ -25,7 +25,7 @@ const Recepie = () => {
               </li>
             ))}
           </ul>
-          <button onClick={setShowCommentForm((prev) => (prev = !prev))}>
+          <button onClick={() => setShowCommentForm((prev) => (prev = !prev))}>
             add comment
           </button>
         </div>

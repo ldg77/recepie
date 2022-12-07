@@ -11,8 +11,7 @@ const Form = () => {
     author: "",
     preparation: "",
     ingredients: [],
-    quantity: "",
-    tags: "",
+    tags: "Beef",
   };
   const [newRecipe, setNewRecipe] = useState(INITIAL);
 
@@ -91,7 +90,6 @@ const Form = () => {
         className="sub-form"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(e.target);
           setNewRecipe(
             (prev) =>
               (prev = {
@@ -101,18 +99,16 @@ const Form = () => {
                   {
                     name: e.target[0].value,
                     quantity: e.target[1].value,
-                    type: e.target[2].value,
+                    measure: e.target[2].value,
                   },
                 ],
               })
           );
-          e.target[0].value = "";
-          e.target[1].value = "";
         }}
       >
         <input type="text" name="ingredients" placeholder="Ingredients" />
         <input type="number" name="quantitiy" placeholder="Quantity" />
-        <select name="types">
+        <select name="measure">
           <option value="l">Liter</option>
           <option value="g">Gramm</option>
           <option value="cup">Cup</option>

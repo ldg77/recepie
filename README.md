@@ -22,7 +22,7 @@ Routes:
 / => post => saveOneRecepie() => {}
 /:id => get => getOneRecepie() => {}
 /tags/:name => get => getByTag() => [{}]
-/:id/comment => post => saveComment() => {}
+/:id/comment => patch => saveComment() => {}
 
 Nav{LOGO,Home,AddRecepie,DropDown(Tag) }
 Cards(IMG, title, tags, <Button ShowRecepie>)
