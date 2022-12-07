@@ -5,12 +5,10 @@ import { useState } from "react";
 import CommentForm from "./CommentForm.jsx";
 const Recepie = () => {
   const { id } = useParams();
-  console.log(id);
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [recepie, setRecepie] = useFetch(connection.URI, id);
   return (
     <>
-      test
       {!recepie.isPending && (
         <div className="recepieDetail">
           <img src={recepie.data.img} />
@@ -24,6 +22,14 @@ const Recepie = () => {
                 {el.name}:{el.quantity} {el.type}
               </li>
             ))}
+          </ul>
+          <ul>
+            {recepie.data.comments &&
+              recepie.data.comments.map((el) => (
+                <>
+                  <li>{el.name}</li> <li>{el.text}</li>
+                </>
+              ))}
           </ul>
           <button onClick={() => setShowCommentForm((prev) => (prev = !prev))}>
             add comment
