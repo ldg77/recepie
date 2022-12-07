@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import connection from "../../connection.json";
-import "./form.scss";
+import "./Form.scss";
 
 const Form = () => {
   const INITIAL = {
