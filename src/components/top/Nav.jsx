@@ -1,9 +1,5 @@
+const Nav = ({ setTag }) => {
+  return <div>Nav</div>;
+};
 
-
-const Nav = () => {
-  return (
-    <div>Nav</div>
-  )
-}
-
-export default Nav
+export default Nav;
