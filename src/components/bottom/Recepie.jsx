@@ -2,10 +2,11 @@ import useFetch from "../../custom/useFetch.jsx";
 import connection from "../../connection.json";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import CommentForm from "./CommentForm.jsx";
 const Recepie = () => {
   const { id } = useParams();
   console.log(id);
-  const [showCommentForm, setSchowCommentForm] = useState(false);
+  const [showCommentForm, setShowCommentForm] = useState(false);
   const [recepie, setRecepie] = useFetch(connection.URI, id);
   return (
     <>
@@ -24,7 +25,13 @@ const Recepie = () => {
               </li>
             ))}
           </ul>
+          <button onClick={setShowCommentForm((prev) => (prev = !prev))}>
+            add comment
+          </button>
         </div>
+      )}
+      {showCommentForm && (
+        <CommentForm id={id} setShowCommentForm={setShowCommentForm} />
       )}
     </>
   );

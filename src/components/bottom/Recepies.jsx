@@ -2,8 +2,10 @@ import React from "react";
 import useFetch from "../../custom/useFetch.jsx";
 import connection from "../../connection.json";
 import { useNavigate } from "react-router-dom";
-const Recepies = () => {
-  const [recepies, setRecepies] = useFetch(connection.URL);
+const Recepies = ({ tag }) => {
+  const [recepies, setRecepies] = useFetch(
+    !tag ? connection.URL : `${connection.URI}/tags/${tag}`
+  );
   const navigator = useNavigate();
 
   return (
