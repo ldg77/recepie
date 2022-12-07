@@ -36,7 +36,7 @@ const Form = () => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => setNewRecipe(INITIAL));
   };
 
   return (
@@ -106,6 +106,8 @@ const Form = () => {
                 ],
               })
           );
+          e.target[0].value = "";
+          e.target[1].value = "";
         }}
       >
         <input type="text" name="ingredients" placeholder="Ingredients" />
