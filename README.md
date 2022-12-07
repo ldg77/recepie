@@ -6,7 +6,7 @@ subtitle:String
 author:String
 preparation:String
 ingredients:[{name:Strin, quantity:Number, type:String}]
-tags:[String]
+tags:String
 comments:[comment]
 }
 Comment:{
