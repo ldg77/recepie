@@ -1,5 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#root {
+  min-height: 100vh;
+  background: linear-gradient(
+    291deg,
+    rgba(244, 240, 233, 1) 13%,
+    rgba(228, 225, 219, 1) 100%
+  );
 }
