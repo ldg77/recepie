@@ -9,20 +9,20 @@
 },
 {
   "img":"https://img.chefkoch-cdn.de/rezepte/2277101363269708/bilder/1340700/crop-642x428/omis-rinderbraten-mit-rotweinsosse.jpg",
-  "title":"Grandma's roast beef with red wine sauce",
+  "title":"Hamburger",
   "subtitle":"Roast beef",
-  "author":"Chefkoch",
-  "preparation":"Peel the carrots and celery, cut the leek into rings and dice the large onion",
-  "ingredients":"name beef", "quantity":1, "type":"kilogram by the pieces, 0,5l beef borm, 0,250l red wine, 1 pieces celery, 2carrots, 1 large onion, garlic, fat for frying, salt and pepper",
-  "tags":"beef, Roast beef, red wine, grandma"
+  "author":"Meier",
+  "preparation":"1) Fleisch braten\n2) mit Käsescheibe belegen\n3) Nach dem Braten zwischen die Brötchenhälften legen\n4) Ketchup drauf\n5) Fertig.",
+  "ingredients":"Meat", "quantity":250, "type":"gram",
+  "tags":"beef"
 },
 {
   "img":"https://img.chefkoch-cdn.de/rezepte/2277101363269708/bilder/1340700/crop-642x428/omis-rinderbraten-mit-rotweinsosse.jpg",
-  "title":"Grandma's roast beef with red wine sauce",
+  "title":"Noodles a la Bolognese",
   "subtitle":"Roast beef",
-  "author":"Chefkoch",
-  "preparation":"Peel the carrots and celery, cut the leek into rings and dice the large onion",
-  "ingredients":"name beef", "quantity":1, "type":"kilogram by the pieces, 0,5l beef borm, 0,250l red wine, 1 pieces celery, 2carrots, 1 large onion, garlic, fat for frying, salt and pepper",
-  "tags":"beef, Roast beef, red wine, grandma"
+  "author":"Omas beste Nudeln",
+  "preparation":"1) Die Zwiebeln und den Knoblauch schälen, fein hacken und in einer Pfanne mit heißem Öl anschwitzen. Das Hackfleisch dazugeben, mit einem Kochlöffel oder Gabel in kleine Stückchen zerteilen und anbraten.\n2) Mit Weißwein ablöschen, die passierten Tomaten und das Tomatenmark unterrühren und die Sauce 10 Minuten bei mittlerer Hitze köcheln lassen. Mit Salz, Pfeffer und Oregano nach Belieben abschmecken.\n3) Danach die Spaghetti in Salzwasser (nach Packungsanweisung ca. 8-10 Minuten) al dente kochen, durch ein Sieb abgießen und anschließend die Pasta unter die Sauce rühren und servieren.",
+  "ingredients":"Nudeln", "quantity":500, "type":"gram",
+  "tags":"porc"
 }]
 
