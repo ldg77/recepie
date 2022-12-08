@@ -4,9 +4,7 @@ import connection from "../../connection.json";
 import { useNavigate } from "react-router-dom";
 const Recepies = ({ tag }) => {
   const [recepies, setRecepies] = useFetch(
-    !tag.length
-      ? "https://rezeptbackend.onrender.com"
-      : `https://rezeptbackend.onrender.com/tags/${tag}`
+    !tag.length ? connection.URI : `${connection.URI}/tags/${tag}`
   );
   const navigator = useNavigate();
 

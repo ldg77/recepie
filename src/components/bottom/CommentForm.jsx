@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import connection from "../../connection.json";
 const CommentForm = ({ id, setShowCommentForm }) => {
   const INITIAL = {
     name: "",
@@ -13,7 +13,7 @@ const CommentForm = ({ id, setShowCommentForm }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://rezeptbackend.onrender.com/${id}/comment`, {
+    fetch(`${connection.URI}/${id}/comment`, {
       method: "PATCH",
       body: JSON.stringify(formData),
       headers: {
