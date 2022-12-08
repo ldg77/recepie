@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url, param = "", option = {}) => {
+const useFetch = (url, param = "", trigger) => {
   const INITIAL = {
     data: [],
     isPending: true,
@@ -10,7 +10,7 @@ const useFetch = (url, param = "", option = {}) => {
   const [serverData, setServerData] = useState(INITIAL);
   console.log(url);
   useEffect(() => {
-    fetch(`${url}/${param}`, option)
+    fetch(`${url}/${param}`)
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
@@ -21,7 +21,7 @@ const useFetch = (url, param = "", option = {}) => {
       .catch((err) =>
         setServerData((prev) => (prev = { ...prev, error: err }))
       );
-  }, [url]);
+  }, [url, trigger]);
   console.log(serverData);
   return [serverData, setServerData];
 };

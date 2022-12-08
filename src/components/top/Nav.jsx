@@ -31,7 +31,7 @@ const Nav = ({ setTag }) => {
             Select Ingredients{" "}
           </label>
           <select
-            id="select "
+            id="select"
             onChange={(event) => setTag((prev) => (prev = event.target.value))}
           >
             {tags.map((tag) => (

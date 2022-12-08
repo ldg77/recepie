@@ -6,7 +6,7 @@ import CommentForm from "./CommentForm.jsx";
 const Recepie = () => {
   const { id } = useParams();
   const [showCommentForm, setShowCommentForm] = useState(false);
-  const [recepie, setRecepie] = useFetch(connection.URI, id);
+  const [recepie, setRecepie] = useFetch(connection.URI, id, showCommentForm);
   return (
     <>
       {!recepie.isPending && (
