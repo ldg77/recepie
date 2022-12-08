@@ -23,7 +23,7 @@ const Recepies = ({ tag }) => {
                 navigator("/" + el._id);
               }}
             >
-              ShowReciepe
+              show recipe
             </button>
           </div>
         ))}
