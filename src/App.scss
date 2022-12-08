@@ -1,5 +1,6 @@
 .App {
   display: grid;
+  gap:1rem;
   grid-template-rows: 100px 1fr;
 
   img {
@@ -8,15 +9,15 @@
   }
   button {
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.3rem;
     display: block;
     margin: 0.5rem auto;
     font-weight: bold;
     border:none;
-    border-radius: 8px;
+    border-radius: 3px;
     box-shadow: 1px 1px 2px 1px rgba(0 0 0 / 0.5);
       &:active{
-        box-shadow: inset  1px 1px 2px 1px rgba(0 0 0 / 0.5);
+        box-shadow: inset  1px 1px 2px 1px rgb(0 0 0 / 0.5);
       }
   }
   .recepies {
@@ -27,16 +28,19 @@
 
     .recepie {
       padding: 1rem;
+      border-radius: 3px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
-      box-shadow: 0 0 10px 1px black;
+      box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
     }
   }
   .recepieDetail {
+    padding:1rem;
     width: min(500px, 80%);
     margin: 0 auto;
+    box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
   }
   .commentForm {
     display: flex;
