@@ -125,7 +125,7 @@ const Form = () => {
           type="text"
           name="name"
           placeholder="Ingredients"
-          value={ingredientsList.ingredients}
+          value={ingredientsList.name}
           onChange={setChangeIngredients}
         />
         <input
