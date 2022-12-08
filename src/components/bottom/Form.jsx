@@ -118,7 +118,14 @@ const Form = () => {
         <select name="measure">
           <option value="l">Liter</option>
           <option value="g">Gramm</option>
+          <option value="cup">Pound</option>
+          <option value="cup">Ounce</option>
           <option value="cup">Cup</option>
+          <option value="cup">Kg</option>
+          <option value="cup">Cup</option>
+          <option value="cup">Pint</option>
+          <option value="cup">Teaspoon</option>
+          <option value="cup">Tablepoon</option>
         </select>
         <button>Save ingredient</button>
       </form>
