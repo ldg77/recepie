@@ -2,7 +2,6 @@ import "./Nav.scss";
 import { useNavigate } from "react-router-dom";
 import logo from './png-transparent-spoon-fork-and-knife-illustration-cafe-italian-cuisine-fast-food-restaurant-logo-gray-knife-and-fork-circle-food-circle-frame-decorative-thumbnail-removebg-preview.png';
 
-
 const tags = ["", "Beef", "Pork", "Chicken", "Vegan", "Vegetarian", "FastFood"];
 
 const Nav = ({ setTag }) => {
@@ -33,7 +32,7 @@ const Nav = ({ setTag }) => {
             Select Ingredients{" "}
           </label>
           <select
-            id="select "
+            id="select"
             onChange={(event) => setTag((prev) => (prev = event.target.value))}
           >
             {tags.map((tag) => (

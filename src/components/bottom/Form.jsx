@@ -11,8 +11,7 @@ const Form = () => {
     author: "",
     preparation: "",
     ingredients: [],
-    quantity: "",
-    tags: "",
+    tags: "Beef",
   };
   const [newRecipe, setNewRecipe] = useState(INITIAL);
 
@@ -54,18 +53,23 @@ const Form = () => {
           type="text"
           name="title"
           placeholder="Title"
+          value={newRecipe.title}
+          required
           onChange={setRecipe}
         />
         <input
           type="text"
           name="subtitle"
           placeholder="Subtitle"
+          value={newRecipe.subtitle}
           onChange={setRecipe}
         />
         <input
           type="text"
           name="author"
           placeholder="Author"
+          value={newRecipe.author}
+          required
           onChange={setRecipe}
         />
         <textarea
@@ -74,6 +78,8 @@ const Form = () => {
           placeholder="Preparation"
           cols="30"
           rows="10"
+          value={newRecipe.preparation}
+          required
           onChange={setRecipe}
         />
         <h2>Tags</h2>
@@ -91,7 +97,6 @@ const Form = () => {
         className="sub-form"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(e.target);
           setNewRecipe(
             (prev) =>
               (prev = {
@@ -101,18 +106,16 @@ const Form = () => {
                   {
                     name: e.target[0].value,
                     quantity: e.target[1].value,
-                    type: e.target[2].value,
+                    measure: e.target[2].value,
                   },
                 ],
               })
           );
-          e.target[0].value = "";
-          e.target[1].value = "";
         }}
       >
         <input type="text" name="ingredients" placeholder="Ingredients" />
         <input type="number" name="quantitiy" placeholder="Quantity" />
-        <select name="types">
+        <select name="measure">
           <option value="l">Liter</option>
           <option value="g">Gramm</option>
           <option value="cup">Cup</option>
