@@ -8,7 +8,7 @@ const useFetch = (url, param = "", trigger) => {
   };
 
   const [serverData, setServerData] = useState(INITIAL);
-  console.log(url);
+
   useEffect(() => {
     fetch(`${url}/${param}`)
       .then((res) => res.json())
@@ -22,7 +22,6 @@ const useFetch = (url, param = "", trigger) => {
         setServerData((prev) => (prev = { ...prev, error: err }))
       );
   }, [url, trigger]);
-  console.log(serverData);
   return [serverData, setServerData];
 };
 

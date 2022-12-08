@@ -164,6 +164,9 @@ const Form = () => {
           <option name="measure" value="tablespoon">
             Tablespoon
           </option>
+          <option name="measure" value="item">
+            Item
+          </option>
         </select>
         <button>Save ingredient</button>
       </form>
