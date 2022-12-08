@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  gap:1rem;
+  gap: 1rem;
   grid-template-rows: 100px 1fr;
 
   img {
@@ -13,18 +13,24 @@
     display: block;
     margin: 0.5rem auto;
     font-weight: bold;
-    border:none;
+    border: none;
     border-radius: 3px;
     box-shadow: 1px 1px 2px 1px rgba(0 0 0 / 0.5);
-      &:active{
-        box-shadow: inset  1px 1px 2px 1px rgb(0 0 0 / 0.5);
-      }
+    &:active {
+      box-shadow: inset 1px 1px 2px 1px rgb(0 0 0 / 0.5);
+    }
   }
   .recepies {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
+    @media (min-width: 500px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
     .recepie {
       padding: 1rem;
@@ -32,20 +38,25 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
       box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
-     
     }
   }
   .recepieDetail {
-    padding:1rem;
+    padding: 1rem;
     width: min(500px, 80%);
     margin: 0 auto;
     box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
-    ol{
-      padding:1rem;
+    ol {
+      padding: 1rem;
     }
-    ul>li{
+    ul > li {
       list-style: none;
+    }
+    img {
+      border-radius: 5px;
     }
   }
   .commentForm {

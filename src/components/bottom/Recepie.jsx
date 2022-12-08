@@ -1,9 +1,10 @@
 import useFetch from "../../custom/useFetch.jsx";
 import connection from "../../connection.json";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import CommentForm from "./CommentForm.jsx";
 const Recepie = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [recepie, setRecepie] = useFetch(connection.URI, id, showCommentForm);
@@ -38,6 +39,13 @@ const Recepie = () => {
           </ul>
           <button onClick={() => setShowCommentForm((prev) => (prev = !prev))}>
             {!showCommentForm ? "open comment form" : "close comment form"}
+          </button>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            back
           </button>
         </div>
       )}

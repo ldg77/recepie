@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 const CommentForm = ({ id, setShowCommentForm }) => {
-  const navigate = useNavigate();
   const INITIAL = {
     name: "",
     text: "",
@@ -44,13 +43,6 @@ const CommentForm = ({ id, setShowCommentForm }) => {
         />
         <button>save comment</button>
       </form>
-      <button
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        back
-      </button>
     </>
   );
 };
