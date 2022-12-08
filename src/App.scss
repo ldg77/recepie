@@ -2,7 +2,7 @@
   display: grid;
   gap: 1rem;
   grid-template-rows: 100px 1fr;
-
+  background: linear-gradient(291deg, rgba(244,240,233,1) 13%, rgba(228,225,219,1) 100%);
   img {
     width: 200px;
     aspect-ratio: 1;
@@ -33,6 +33,7 @@
     }
 
     .recepie {
+      // background: linear-gradient(291deg, rgba(127,128,134,1) 8%, rgba(185,190,190,1) 61%);
       padding: 1rem;
       border-radius: 3px;
       display: flex;
