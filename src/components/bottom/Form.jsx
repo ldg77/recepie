@@ -14,7 +14,7 @@ const Form = () => {
     ingredients: [],
   };
   const INITIALSUB = {
-    ingredients: "",
+    name: "",
     quantity: "",
     measure: "l",
   };
@@ -123,7 +123,7 @@ const Form = () => {
       >
         <input
           type="text"
-          name="ingredients"
+          name="name"
           placeholder="Ingredients"
           value={ingredientsList.ingredients}
           onChange={setChangeIngredients}
