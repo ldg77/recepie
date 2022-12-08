@@ -13,7 +13,6 @@ const useFetch = (url, param = "", trigger) => {
     fetch(`${url}/${param}`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
         setServerData(
           (prev) => (prev = { ...prev, data: json, isPending: false })
         );

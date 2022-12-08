@@ -24,7 +24,7 @@ const Recepie = () => {
               </li>
             ))}
           </ol>
-          {recepie.data.comments.length > 0 && <h3>Comments</h3>}
+          {recepie.data.comments && <h3>Comments</h3>}
           <ul>
             {recepie.data.comments &&
               recepie.data.comments.map((el) => (
