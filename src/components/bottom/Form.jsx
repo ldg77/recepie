@@ -10,17 +10,31 @@ const Form = () => {
     subtitle: "",
     author: "",
     preparation: "",
-    ingredients: [],
     tags: "Beef",
+    ingredients: [],
+  };
+  const INITIALSUB = {
+    ingredients: "",
+    quantity: "",
+    measure: "l",
   };
   const [newRecipe, setNewRecipe] = useState(INITIAL);
+  const [ingredientsList, setIngredientsList] = useState(INITIALSUB);
 
   const setRecipe = (event) => {
     setNewRecipe(
       (prev) => (prev = { ...prev, [event.target.name]: event.target.value })
     );
   };
-
+  const setChangeIngredients = (e) => {
+    setIngredientsList(
+      (prev) =>
+        (prev = {
+          ...prev,
+          [e.target.name]: e.target.value,
+        })
+    );
+  };
   const typeHandler = (e) => {
     setNewRecipe((prev) => (prev = { ...prev, tags: e.target.value }));
   };
@@ -82,7 +96,7 @@ const Form = () => {
           required
           onChange={setRecipe}
         />
-        <h2>Tags</h2>
+        <h2>CATEGORY</h2>
         <select name="types" onChange={typeHandler}>
           <option value="Beef">Beef</option>
           <option value="Pork">Pork</option>
@@ -92,7 +106,7 @@ const Form = () => {
           <option value="Vegan">Vegan</option>
         </select>
       </form>
-      <h2>Ingredients</h2>
+      <h2>INGREDIENTS</h2>
       <form
         className="sub-form"
         onSubmit={(e) => {
@@ -101,31 +115,55 @@ const Form = () => {
             (prev) =>
               (prev = {
                 ...prev,
-                ingredients: [
-                  ...prev.ingredients,
-                  {
-                    name: e.target[0].value,
-                    quantity: e.target[1].value,
-                    measure: e.target[2].value,
-                  },
-                ],
+                ingredients: [...prev.ingredients, ingredientsList],
               })
           );
+          setIngredientsList(INITIALSUB);
         }}
       >
-        <input type="text" name="ingredients" placeholder="Ingredients" />
-        <input type="number" name="quantitiy" placeholder="Quantity" />
-        <select name="measure">
-          <option value="l">Liter</option>
-          <option value="g">Gramm</option>
-          <option value="cup">Pound</option>
-          <option value="cup">Ounce</option>
-          <option value="cup">Cup</option>
-          <option value="cup">Kg</option>
-          <option value="cup">Cup</option>
-          <option value="cup">Pint</option>
-          <option value="cup">Teaspoon</option>
-          <option value="cup">Tablepoon</option>
+        <input
+          type="text"
+          name="ingredients"
+          placeholder="Ingredients"
+          value={ingredientsList.ingredients}
+          onChange={setChangeIngredients}
+        />
+        <input
+          type="number"
+          name="quantity"
+          placeholder="Quantity"
+          value={ingredientsList.quantity}
+          onChange={setChangeIngredients}
+        />
+
+        <select name="measure" onChange={setChangeIngredients}>
+          <option name="measure" value="l">
+            Liter
+          </option>
+          <option name="measure" value="g">
+            Gramm
+          </option>
+          <option name="measure" value="pound">
+            Pound
+          </option>
+          <option name="measure" value="ounce">
+            Ounce
+          </option>
+          <option name="measure" value="cup">
+            Cup
+          </option>
+          <option name="measure" value="kg">
+            Kg
+          </option>
+          <option name="measure" value="pint">
+            Pint
+          </option>
+          <option name="measure" value="teaspoon">
+            Teaspoon
+          </option>
+          <option name="measure" value="tablespoon">
+            Tablespoon
+          </option>
         </select>
         <button>Save ingredient</button>
       </form>
