@@ -1,4 +1,15 @@
 .App {
   display: grid;
   grid-template-rows: 100px 1fr;
+  img {
+    width: 200px;
+  }
+  .recepies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .recepieDetail {
+    width: min(500px, 80%);
+    margin: 0 auto;
+  }
 }

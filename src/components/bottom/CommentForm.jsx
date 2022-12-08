@@ -14,7 +14,7 @@ const CommentForm = ({ id, setShowCommentForm }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/${id}/comment`, {
+    fetch(`https://rezeptbackend.onrender.com/${id}/comment`, {
       method: "PATCH",
       body: JSON.stringify(formData),
       headers: {

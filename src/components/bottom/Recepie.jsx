@@ -19,7 +19,7 @@ const Recepie = () => {
           <ul>
             {recepie.data.ingredients.map((el) => (
               <li>
-                {el.name}:{el.quantity} {el.type}
+                {el.name}:{el.quantity} {el.measure}
               </li>
             ))}
           </ul>
@@ -32,7 +32,7 @@ const Recepie = () => {
               ))}
           </ul>
           <button onClick={() => setShowCommentForm((prev) => (prev = !prev))}>
-            add comment
+            {!showCommentForm ? "open comment form" : "close comment form"}
           </button>
         </div>
       )}
