@@ -1,7 +1,7 @@
 import { useState } from "react";
-import connection from "../../connection.json";
-
+import { useNavigate } from "react-router-dom";
 const CommentForm = ({ id, setShowCommentForm }) => {
+  const navigate = useNavigate();
   const INITIAL = {
     name: "",
     text: "",
@@ -25,8 +25,8 @@ const CommentForm = ({ id, setShowCommentForm }) => {
       .then((json) => setShowCommentForm((prev) => (prev = false)));
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <>
+      <form onSubmit={handleSubmit} className="commentForm">
         <input
           type="text"
           name="name"
@@ -44,7 +44,14 @@ const CommentForm = ({ id, setShowCommentForm }) => {
         />
         <button>save comment</button>
       </form>
-    </div>
+      <button
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        back
+      </button>
+    </>
   );
 };
 

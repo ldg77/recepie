@@ -16,18 +16,23 @@ const Recepie = () => {
           <h3>{recepie.data.subtitle}</h3>
           <p>{recepie.data.author}</p>
           <p>{recepie.data.preparation}</p>
-          <ul>
+          <ol>
             {recepie.data.ingredients.map((el) => (
               <li>
                 {el.name}:{el.quantity} {el.measure}
               </li>
             ))}
-          </ul>
+          </ol>
+          {recepie.data.comments.length > 0 && <h3>Comments</h3>}
           <ul>
             {recepie.data.comments &&
               recepie.data.comments.map((el) => (
                 <>
-                  <li>{el.name}</li> <li>{el.text}</li>
+                  <li>
+                    {el.name}
+                    {" : "}
+                    {el.text}
+                  </li>
                 </>
               ))}
           </ul>

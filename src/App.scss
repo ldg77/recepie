@@ -1,15 +1,25 @@
 .App {
   display: grid;
   grid-template-rows: 100px 1fr;
+
   img {
     width: 200px;
     aspect-ratio: 1;
+  }
+  button {
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .recepies {
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+
     .recepie {
       padding: 1rem;
       display: flex;
@@ -22,5 +32,21 @@
   .recepieDetail {
     width: min(500px, 80%);
     margin: 0 auto;
+  }
+  .commentForm {
+    display: flex;
+    flex-direction: column;
+    width: min(500px, 80%);
+    margin: 0 auto;
+    gap: 1rem;
+    input,
+    textarea {
+      font-size: 1.3rem;
+      padding: 0.3rem;
+      border: none;
+      outline: none;
+      border-bottom: 0.5px solid black;
+      resize: none;
+    }
   }
 }
