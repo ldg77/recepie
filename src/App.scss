@@ -6,12 +6,17 @@
     aspect-ratio: 1;
   }
   .recepies {
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     .recepie {
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      box-shadow: 0 0 10px 1px black;
     }
   }
   .recepieDetail {
