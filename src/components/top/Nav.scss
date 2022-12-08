@@ -6,6 +6,25 @@
   font-size: 1.2rem;
   font-family: sans-serif;
   height: 100%;
+  label{
+    font-weight: bold;
+    margin-right:.5rem
+  }
+  select{
+    margin-right:2rem
+  }
+  .nav-btn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    box-shadow: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active{
+      box-shadow: none
+    }
+  }
 }
 
 .logo {
@@ -13,14 +32,6 @@
   height: 100%;
 }
 
-.nav-btn {
-  border: none;
-  background: none;
-  font-size: 1.2rem;
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 select {
   // appearance: none;

@@ -32,8 +32,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
+     
     }
   }
   .recepieDetail {
@@ -41,6 +41,12 @@
     width: min(500px, 80%);
     margin: 0 auto;
     box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 0.5);
+    ol{
+      padding:1rem;
+    }
+    ul>li{
+      list-style: none;
+    }
   }
   .commentForm {
     display: flex;
